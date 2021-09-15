@@ -1,0 +1,188 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background: radial-gradient(
+    circle at center,
+    hsl(214, 47%, 23%),
+    hsl(237, 49%, 15%)
+  );
+}
+
+.heading {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+  border: 5px solid;
+  border-radius: 30px;
+  padding: 30px;
+  width: 50%;
+  margin: 20px auto;
+}
+.heading .score {
+  background-color: white;
+  padding: 10px 30px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.score h6 {
+  color: hsl(229, 64%, 46%);
+}
+.score p {
+  text-align: center;
+  font-size: 50px;
+}
+.step1 {
+  /* display: none; */
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+}
+.tri {
+  background-image: url("./images/bg-triangle.svg");
+  background-repeat: no-repeat;
+  width: 305px;
+  margin: 58px auto;
+  position: relative;
+  height: 345px;
+}
+.tri .paper,
+.tri .rock,
+.tri .scissors {
+  position: absolute;
+}
+.paper img,
+.scissors img,
+.rock img {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.tri .paper {
+  top: -40px;
+  left: -40px;
+}
+.tri .scissors {
+  top: -40px;
+  left: 80%;
+}
+.tri .rock {
+  top: 60%;
+  left: 30%;
+}
+.paper {
+  border: 20px solid hsl(230, 89%, 62%);
+  background-color: white;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.rock {
+  border: 20px solid hsl(349, 71%, 52%);
+  background-color: white;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.scissors {
+  border: 20px solid hsl(39, 89%, 49%);
+  background-color: white;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.step2 {
+  display: none;
+  color: white;
+  font-weight: bold;
+}
+.step2 .content {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 100px;
+}
+.step2 .content h3 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.state {
+  margin-top: -15px;
+}
+.state h3{
+    font-size: 50px;
+}
+button {
+  padding: 40px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  color: hsl(229, 25%, 31%);
+  cursor: pointer;
+}
+.rules{
+  cursor: pointer;
+  color: white;
+  border: 2px solid white;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  position: absolute;
+  right: 0;
+  margin-right: 25px;
+  margin-bottom: 20px;
+  bottom: 0;
+}
+.modal{
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  margin-bottom: 15px;
+  z-index: 1;
+  display: none;
+}
+.modal-content{
+  background-color: white;
+  width: 370px;
+  height: 60%;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  margin: 100px auto;
+}
+.modal-content .head{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  color: hsl(229, 25%, 31%);
+}
+.close{
+  cursor: pointer;
+}
+.modal-content .body{
+  margin: 30px;
+}
